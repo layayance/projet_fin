@@ -12,15 +12,24 @@
         </div>
 
         <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <?php if(isset($_SESSION['user'])): ?>
+
+<span>Je suis connecté</span>
+
+<?php else: ?>
+
+    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                
-                <li class="nav-item"> 
-                    <a class="nav-link active" aria-current="page" href="login.php">Se connecter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="inscription.php">S'inscrire</a>
-                </li>
-            </ul>
+               <li class="nav-item"> 
+                   <a class="nav-link active" aria-current="page" href="login.php">Se connecter</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="inscription.php">S'inscrire</a>
+               </li>
+           </ul>
+
+<?php endif; ?>
+            
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Recherche</button>

@@ -15,24 +15,53 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+    <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Profile</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="/css/style-begin-login.css">
+        <link rel="manifest" href="/sw/manifest.webmanifest">			
+        <title>Fidelis ~ Page d'ouverture</title>
     </head>
-
     <body>
-        <?php
-        // header
-        require_once 'layouts/header.php'
-        ?>
+        <!--=============== HEADER ===============-->
+        <header class="Base container">
+           <a href="/html/begin.html">
+            <i class="ri-body-scan-line" id="theme-button"></i>
+           </a>
 
-        <?php
-        // footer
-        require_once 'layouts/footer.php'
-        ?>
+            <div class="Base__container grid">
+                <div class="Base__data">
+                    <div class="Base__border">
+                        <img src="/assets/img/1.png" alt="">
+                    </div>
+
+                    <h2 class="Base__first-text">Gagner des récompenses grâce aux petits commerces avec Fidelis !</h2>
+                    <h3 class="Base__scd-text">Fidelis est un dispositif de fidelisation qui identifie et récompense les clients des petits commercants qui decouvrent ou achètent régulièrement dans leurs commerces !</h3>
+                </div>
+
+                <div class="Base__buttons">
+
+                    <a href="/html/login-signup.html" target="_blank" class="button">
+                        Commencer <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+            </div>
+        </header>    
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer container">
+            <span class="footer__copy">
+                &#169; Fidelis. Tous droits reservés
+            </span>
+        </footer>
+
+        <!--=============== JS ===============-->
+        <script src="/js/main.js"></script>
+        <script src="/sw/serviceworker.js"></script>		
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>
 </html>
